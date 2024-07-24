@@ -1,0 +1,40 @@
+uuid: ac12fe1d-e27f-45e8-b726-36cc409f6944
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.schedule_and_pricing.field_media_image
+    - field.field.paragraph.schedule_and_pricing.field_text_formated_long2
+    - field.field.paragraph.schedule_and_pricing.field_text_formatted_long
+    - paragraphs.paragraphs_type.schedule_and_pricing
+  module:
+    - text
+id: paragraph.schedule_and_pricing.default
+targetEntityType: paragraph
+bundle: schedule_and_pricing
+mode: default
+content:
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_text_formated_long2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_text_formatted_long:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

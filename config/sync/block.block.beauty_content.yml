@@ -1,0 +1,22 @@
+uuid: 6c393219-d73b-4202-b070-bad5188e4a1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - beauty
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: beauty_content
+theme: beauty
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

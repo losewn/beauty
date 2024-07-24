@@ -1,0 +1,24 @@
+uuid: a2054124-1290-4d1d-9eb5-977e69ac5754
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_formated_long2
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.schedule_and_pricing
+  module:
+    - text
+id: paragraph.schedule_and_pricing.field_text_formated_long2
+field_name: field_text_formated_long2
+entity_type: paragraph
+bundle: schedule_and_pricing
+label: 'Text formated long2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

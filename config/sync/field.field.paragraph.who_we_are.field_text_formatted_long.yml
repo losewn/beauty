@@ -1,0 +1,26 @@
+uuid: 9f20618a-158a-4c24-8ab5-c123f8428d39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_formatted_long
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.who_we_are
+  module:
+    - text
+id: paragraph.who_we_are.field_text_formatted_long
+field_name: field_text_formatted_long
+entity_type: paragraph
+bundle: who_we_are
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

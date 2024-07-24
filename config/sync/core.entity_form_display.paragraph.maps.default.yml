@@ -1,0 +1,27 @@
+uuid: 35fdbbb8-f0b8-4775-8819-581045cd5592
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.maps.field_text_formatted_long
+    - paragraphs.paragraphs_type.maps
+  module:
+    - text
+id: paragraph.maps.default
+targetEntityType: paragraph
+bundle: maps
+mode: default
+content:
+  field_text_formatted_long:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

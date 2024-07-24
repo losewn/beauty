@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraphs.
+ *
+ * Available variables:
+ * - paragraphs: Full paragraphs entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraphs.getCreatedTime() will return the paragraphs creation timestamp.
+ *   - paragraphs.id(): The paragraphs ID.
+ *   - paragraphs.bundle(): The type of the paragraphs, for example, "image" or "text".
+ *   - paragraphs.getOwnerId(): The user ID of the paragraphs author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraphs object.
+ * - content: All paragraphs items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraphs is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraphs; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'paragraphs',
+    'paragraphs--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraphs--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraphs--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <div class="row row-50 align-items-lg-center justify-content-xl-between">
+            <div class="col-lg-6">
+              <div class="block-xs">
+                <h2>{{ content.field_title }}</h2>
+                <div class="divider-lg"></div>
+                <div>{{ content.field_text_plain }}</div>
+              </div>
+              <div class="row row-30">
+                <div>
+                  {{ content.field_text_formatted_long }}
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-images box-images-variant-3">
+                <div class="box-images-item" data-parallax-scroll="{&quot;y&quot;: -20,   &quot;smoothness&quot;: 30 }" style="transform:translate3d(0px, -20px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, -20px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); "><img src="{{ file_url(content.field_media_image[0]['#media'].field_media_image.entity.uri.value) }}" alt="" width="470" height="282">
+                </div>
+                <div class="box-images-item box-images-without-border" data-parallax-scroll="{&quot;y&quot;: 40,  &quot;smoothness&quot;: 30 }" style="transform:translate3d(0px, 26.309px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 26.309px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); "><img src="{{ file_url(content.field_media_image2[0]['#media'].field_media_image.entity.uri.value) }}" alt="" width="470" height="282">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,29 @@
+uuid: decd7e61-fa80-4d45-a696-7f80d2a9c740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_image2
+    - media.type.image
+    - paragraphs.paragraphs_type.who_we_are
+id: paragraph.who_we_are.field_media_image2
+field_name: field_media_image2
+entity_type: paragraph
+bundle: who_we_are
+label: 'Media image2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

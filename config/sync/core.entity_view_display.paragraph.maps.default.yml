@@ -1,0 +1,22 @@
+uuid: 5f26fba5-e3a8-49a5-8e5d-ae3a4c5bba6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.maps.field_text_formatted_long
+    - paragraphs.paragraphs_type.maps
+  module:
+    - text
+id: paragraph.maps.default
+targetEntityType: paragraph
+bundle: maps
+mode: default
+content:
+  field_text_formatted_long:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

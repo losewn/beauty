@@ -1,0 +1,26 @@
+uuid: 6ed565f1-c7a1-49eb-8e4e-527474ef3691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_formatted_long
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.text_with_image
+  module:
+    - text
+id: paragraph.text_with_image.field_text_formatted_long
+field_name: field_text_formatted_long
+entity_type: paragraph
+bundle: text_with_image
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

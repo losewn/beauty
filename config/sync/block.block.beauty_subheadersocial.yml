@@ -1,0 +1,29 @@
+uuid: 4c7e991d-4c58-426f-a3f9-19650cfc446a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b1cfde02-e8d0-438d-aa91-d67e5dd4862f'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - beauty
+third_party_settings:
+  block_class:
+    classes: social-block
+id: beauty_subheadersocial
+theme: beauty
+region: subheader
+weight: -3
+provider: null
+plugin: 'block_content:b1cfde02-e8d0-438d-aa91-d67e5dd4862f'
+settings:
+  id: 'block_content:b1cfde02-e8d0-438d-aa91-d67e5dd4862f'
+  label: 'SubHeader social'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

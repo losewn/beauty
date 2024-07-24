@@ -1,0 +1,17 @@
+beauty_fluid:
+  label: 'Beauty fluid (full width)'
+  category: 'Beauty layout'
+  class: '\Drupal\beauty_core\Plugin\Layout\FluidColumn'
+  template: templates/paragraphs/beauty_fluid
+  regions:
+    content_paragraphs:
+      label: 'Content paragraphs'
+
+beauty_container:
+  label: 'Beauty container'
+  category: 'Beauty layout'
+  class: '\Drupal\beauty_core\Plugin\Layout\ContainerColumn'
+  template: templates/paragraphs/beauty_container
+  regions:
+    content_paragraphs:
+      label: 'Content paragraphs'

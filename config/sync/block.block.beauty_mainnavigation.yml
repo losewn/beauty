@@ -1,0 +1,29 @@
+uuid: e4ec2a8b-48c0-4088-ae95-79b0f4d7841b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - beauty
+third_party_settings:
+  block_class:
+    classes: 'rd-navbar-main-element col-lg-10'
+id: beauty_mainnavigation
+theme: beauty
+region: footer
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 5662b990-8d43-4bf9-a175-c4ccb86470b2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6cc07e71-19d7-4d90-b9de-7ba71d78542c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - beauty
+third_party_settings:
+  block_class:
+    classes: header-info
+id: beauty_subheaderinfo
+theme: beauty
+region: subheader
+weight: -4
+provider: null
+plugin: 'block_content:6cc07e71-19d7-4d90-b9de-7ba71d78542c'
+settings:
+  id: 'block_content:6cc07e71-19d7-4d90-b9de-7ba71d78542c'
+  label: 'SubHeader info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

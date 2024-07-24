@@ -1,0 +1,15 @@
+global-styling:
+  js:
+    js/core.min.js: { }
+    js/html5shiv.min.js: { }
+    js/pointer-events.min.js: { }
+    js/script.js: { }
+    js/vanilla-tilt.js: { }
+  css:
+    component:
+      css/bootstrap.css: { }
+      css/fonts.css: { }
+      css/style.css: { }
+  dependencies:
+    - core/drupal
+    - core/once

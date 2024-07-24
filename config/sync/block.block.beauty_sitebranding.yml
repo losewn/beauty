@@ -1,0 +1,27 @@
+uuid: 092ff105-d265-4d02-9d0e-9f626d9fa3af
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - beauty
+third_party_settings:
+  block_class:
+    classes: 'rd-navbar-panel col-lg-2'
+id: beauty_sitebranding
+theme: beauty
+region: footer
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

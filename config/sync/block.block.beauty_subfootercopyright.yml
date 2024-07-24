@@ -1,0 +1,25 @@
+uuid: f7ae13ab-e828-405e-86cd-1cb7bea4b47f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:22df9c15-36d0-4aa8-8343-e549d2d3d991'
+  module:
+    - block_content
+  theme:
+    - beauty
+id: beauty_subfootercopyright
+theme: beauty
+region: subfooter
+weight: 0
+provider: null
+plugin: 'block_content:22df9c15-36d0-4aa8-8343-e549d2d3d991'
+settings:
+  id: 'block_content:22df9c15-36d0-4aa8-8343-e549d2d3d991'
+  label: 'Subfooter copyright'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
