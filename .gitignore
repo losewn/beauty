@@ -2,12 +2,12 @@
 /bin
 
 # Ignore paths that contain user-generated content.
-docroot/sites/*/services.yml
-docroot/sites/*/settings.local.php
-docroot/sites/*/settings.php
-docroot/files
-docroot/sites/*/files
-docroot/sites/*/private
+web/sites/*/services.yml
+web/sites/*/settings.local.php
+web/sites/*/settings.php
+web/files
+web/sites/*/files
+web/sites/*/private
 acquia-files
 /cache
 
@@ -16,12 +16,12 @@ acquia-files
 
 # Composerize settings
 vendor/
-docroot/core/
-docroot/vendor/
-docroot/libraries/
-docroot/modules/contrib
-docroot/themes/contrib
-docroot/profiles/contrib
+web/core/
+web/vendor/
+web/libraries/
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
 fin bash
 # Ignore node modules
 node_modules/
